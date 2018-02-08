@@ -35,7 +35,7 @@ public class App {
 
         // note: 坑
         // TreeSet 基于 TreeMap.put(k, v) 实现了 Set.add(Object) 操作。
-        // TreeHashMap 基于 Red-Blank Tree 实现, 通过 compareTo(Object) 的方法来判断元素是否重复, 与 equals 关联并不是很大。
+        // TreeMap 基于 Red-Black Tree 实现, 通过 compareTo(Object) 的方法来判断元素是否重复, 与 equals 关联并不是很大。
         // 在执行 add(Object) 时, 会通过 cmp = thisEntry.key.compareTo(otherEntry.key), 判断新的节点应该如何存放。 如果节点（Entry.key）不相等 (cmp > 0 || cmp < 0), 则直接放入二叉树结构中；
         // 如果节点（Entry.key）已存在 (cmp == 0)，则不更新节点 key，只更新节点对应的 value。
         // 因为是 TreeSet，所有的 key 为 Set 集合内的元素, value 统一默认为 new Object()。
