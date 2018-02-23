@@ -8,7 +8,7 @@ import java.util.*;
  * Hello world!
  *
  */
-public class App {
+public class TreeSetDemo01 {
     public static void main( String[] args ) {
 
         SortObj[] sortObjs = new SortObj[] {
